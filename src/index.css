@@ -19,7 +19,9 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 body {
   height: 100vh;
   overflow: hidden;
@@ -41,6 +43,16 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+}
+body{
+margin:0;
+font-family:system-ui;
+background:#F4F1FB;
+}
+
+img{
+max-width:100%;
+height:auto;
 }
 
 a:hover {

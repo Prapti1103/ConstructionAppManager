@@ -32,7 +32,7 @@ sx={{color:"#6F56B8"}}
 Projects
 </Typography>
 
-<Grid container spacing={4}>
+<Grid container spacing={3}>
 
 {projects.map((project)=>(
 <Grid

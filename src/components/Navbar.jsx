@@ -1,14 +1,10 @@
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar(){
 
 const navigate = useNavigate();
-
-const handleLogout = ()=>{
-navigate("/");
-};
 
 return(
 
@@ -17,19 +13,30 @@ position="static"
 sx={{
 background:"linear-gradient(90deg,#6F56B8,#7C3AED)"
 }}
+
 >
 
-<Toolbar>
+<Toolbar
+sx={{
+display:"flex",
+justifyContent:"space-between"
+}}
 
-<Box display="flex" alignItems="center" gap={1} flexGrow={1}>
+>
+
+<Box
+display="flex"
+alignItems="center"
+gap={1}
+sx={{cursor:"pointer"}}
+onClick={()=>navigate("/projects")}
+
+>
 
 <Box
 component="img"
 src={logo}
-sx={{
-width:85,
-height:85
-}}
+sx={{width:35}}
 />
 
 <Typography fontWeight="bold">
@@ -39,17 +46,17 @@ Construction Project Manager
 </Box>
 
 <Button
-variant="contained"
-color="error"
-onClick={handleLogout}
+color="inherit"
+onClick={()=>navigate("/")}
+
 >
-Logout
-</Button>
+
+Logout </Button>
 
 </Toolbar>
 
 </AppBar>
 
-);
+)
 
 }
